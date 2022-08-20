@@ -14,9 +14,44 @@
     <img src="naruto.png" alt="naruto">
     <br>
     <img src="naruto.jpg" width="300" />
+    <br>
     <img src="naruto.jpg" height="400" />
+    <br>
     <img src="naruto.jpg" width="300" height="600" />
+    <br>
     <img src="naruto.jpg" height="100%" />
+    <br>
+    <!-- çerçeve ekledim-->
+    <img src="naruto.jpg" border="5" />
+    <br>
+    <!--sağ yaslı gelmesi için-->
+    <img src="naruto.jpg" align="right">
+    <br>
+    <!--fotoğrafa link ekledim-->
+    <a href="https://github.com/misaline">
+        <img src="naruto.jpg" alt="misaline" style="width:42px;height:42px;">
+    </a>
+    <!--fotoğraf üstüne kordinatla link ekleme -->
+    <img src="naruto.jpg" alt="naruto" usemap="#workmap" width="400" height="379">
+    <map name="workmap">
+        <area shape="rect" coords="0,0,200,379" alt="zehra" href="https://github.com/misaline">
+        <area shape="rect" coords="200,0,400,379" alt="samet" href="https://github.com/sametaylak">
+    </map>
+
+    <!--Resim Yüklendi mesajını ekledim-->
+    <img src="naruto.jpg" onload="resimYuklendi()" />
+    <script>
+        function resimYuklendi() {
+            alert("Resim Yüklendi");
+        }
+    </script>
+    <!--Genişliğe göre fotoğraf gösterme-->
+    <picture>
+        <source srcset="kurama.jpg" media="(max-width: 800px)">
+
+        <img src="naruto.jpg" />
+    </picture>
 </body>
+
 
 </html>
